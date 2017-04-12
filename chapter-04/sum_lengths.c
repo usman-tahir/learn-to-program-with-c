@@ -14,10 +14,13 @@ int main() {
 
   meters_sum = meters_1 + meters_2;
   centimeters_sum = centimeters_1 + centimeters_2;
-  modulus = centimeters_sum % 100;
-  remainingCentimeters = centimeters_sum - (modulus * 100);
+
+  if (centimeters_sum >= 100) {
+    meters_sum += (centimeters_sum / 100);
+    centimeters_sum %= 100;
+  }
 
   printf("%dm, %dcm + %dm, %dcm = %dm, %dcm\n", meters_1, centimeters_1,
-    meters_2, centimeters_2, meters_sum, remainingCentimeters);
+    meters_2, centimeters_2, meters_sum, centimeters_sum);
 
 }
