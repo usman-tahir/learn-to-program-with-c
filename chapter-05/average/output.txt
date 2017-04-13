@@ -1,0 +1,2 @@
+5 numbers were supplied.
+The sum is 143, and the average is 28.60
